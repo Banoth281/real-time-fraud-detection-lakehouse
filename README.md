@@ -128,3 +128,6 @@ All banking records are synthetic and generated solely for engineering demonstra
 
 ### Prometheus Monitoring Metrics
 ![Prometheus Monitoring](docs/images/prometheus-metrics.png)
+
+### Prometheus Target Health
+![Prometheus Target Health](docs/images/prometheus-target.png)
