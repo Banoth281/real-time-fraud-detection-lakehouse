@@ -114,3 +114,17 @@ The processor writes the Bronze record and Silver transaction before committing 
 
 All banking records are synthetic and generated solely for engineering demonstrations. No real customer or financial data is used.
 
+
+## Live Project Screenshots
+
+### Fraud Lakehouse API
+![Fraud Lakehouse API](docs/images/api-docs.png)
+
+### Real-Time Fraud Summary
+![Real-Time Fraud Summary](docs/images/fraud-summary.png)
+
+### Fraud Detection Rules
+![Fraud Detection Rules](docs/images/fraud-rules.png)
+
+### Prometheus Monitoring Metrics
+![Prometheus Monitoring](docs/images/prometheus-metrics.png)
