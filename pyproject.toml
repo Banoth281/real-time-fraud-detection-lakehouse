@@ -1,0 +1,10 @@
+[project]
+name = "real-time-fraud-detection-lakehouse"
+version = "1.0.0"
+description = "Production-style streaming fraud detection lakehouse"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-ra"

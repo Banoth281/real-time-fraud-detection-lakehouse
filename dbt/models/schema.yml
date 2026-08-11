@@ -1,0 +1,10 @@
+version: 2
+models:
+  - name: gold_daily_fraud_metrics
+    description: Daily transaction value, fraud exposure and risk metrics.
+    columns:
+      - name: transaction_date
+        tests: [unique, not_null]
+      - name: transactions
+        tests: [not_null]
+

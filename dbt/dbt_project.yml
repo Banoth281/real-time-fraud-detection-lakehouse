@@ -1,0 +1,11 @@
+name: fraud_lakehouse
+version: "1.0.0"
+config-version: 2
+profile: fraud_lakehouse
+model-paths: ["models"]
+models:
+  fraud_lakehouse:
+    +materialized: view
+    gold:
+      +materialized: table
+
