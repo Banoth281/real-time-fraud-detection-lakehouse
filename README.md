@@ -1,5 +1,7 @@
 # Real-Time Banking Fraud Detection Lakehouse
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Open_Dashboard-FF4B4B?logo=streamlit&logoColor=white)](https://real-time-fraud-detection-lakehouse-jfsazacdwjdgkz6gplthwv.streamlit.app/)
+
 [![Fraud lakehouse CI](https://github.com/Banoth281/real-time-fraud-detection-lakehouse/actions/workflows/ci.yml/badge.svg)](https://github.com/Banoth281/real-time-fraud-detection-lakehouse/actions/workflows/ci.yml)
 
 A production-style data engineering project that generates synthetic banking transactions, ingests them through a Kafka-compatible stream, applies schema and fraud-quality rules, archives immutable Bronze events in an S3-compatible data lake, and persists analytics-ready Silver/Gold data in PostgreSQL.
