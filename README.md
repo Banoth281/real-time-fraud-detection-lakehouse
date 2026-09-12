@@ -4,6 +4,11 @@
 
 A production-style data engineering project that generates synthetic banking transactions, ingests them through a Kafka-compatible stream, applies schema and fraud-quality rules, archives immutable Bronze events in an S3-compatible data lake, and persists analytics-ready Silver/Gold data in PostgreSQL.
 
+> **Recruiter demo:** the Streamlit dashboard automatically uses a representative
+> synthetic banking snapshot when the local FastAPI service is unavailable.
+> Follow the [public demo deployment](#-deploy-the-public-recruiter-demo) steps
+> to create a shareable `streamlit.app` URL.
+
 ## Architecture
 
 ```mermaid
@@ -109,6 +114,47 @@ The processor writes the Bronze record and Silver transaction before committing 
 ## Suggested resume bullet
 
 > Built a containerised real-time banking fraud lakehouse using Python, Kafka-compatible Redpanda, MinIO and PostgreSQL. Implemented schema validation, stateful velocity rules, dead-letter handling, Bronze/Silver/Gold modelling, idempotent writes, manual offset management, dbt transformations, FastAPI metrics and CI/CD.
+
+
+## 🌐 Deploy the Public Recruiter Demo
+
+The public dashboard does not require Kafka, PostgreSQL, MinIO, dbt or FastAPI.
+It uses the representative synthetic snapshot in `dashboard/demo_data.json`.
+When a reachable API is configured, the same dashboard automatically switches
+its headline summary and rule metrics to live mode.
+
+1. Sign in to [Streamlit Community Cloud](https://share.streamlit.io/) with GitHub.
+2. Select **Create app** and enter:
+   - Repository: `Banoth281/real-time-fraud-detection-lakehouse`
+   - Branch: `main`
+   - App file: `dashboard/app.py`
+   - Python version: `3.12`
+3. Choose an available app URL and select **Deploy**.
+4. Open the public URL in a private browser window to confirm recruiter access.
+
+Streamlit uses `dashboard/requirements.txt`, keeping the hosted demo small and
+independent from the complete engineering environment.
+
+After deployment, add the real URL near the top of this README:
+
+```markdown
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Open_Dashboard-FF4B4B?logo=streamlit&logoColor=white)](https://YOUR-APP.streamlit.app)
+```
+
+### Optional live API mode
+
+Set `API_BASE_URL` in Streamlit secrets to a publicly hosted FastAPI base URL.
+If the service is unreachable, the dashboard falls back safely to portfolio
+demo mode.
+
+## Dashboard structure
+
+```text
+dashboard/
+├── app.py
+├── demo_data.json
+└── requirements.txt
+```
 
 ## Data notice
 
